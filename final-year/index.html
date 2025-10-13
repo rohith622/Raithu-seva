@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayathri Enterprises - Agricultural Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Logo with name on it */
+        .logo-container {
+            position: relative;
+            height: 60px;
+            width: 200px;
+        }
+
+        .logo-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            opacity: 0.2; /* transparent logo */
+        }
+
+        .logo-container .logo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #010e02e3;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* Make header full screen */
+        .main-header {
+            width: 100%;
+            height: 100vh; /* full screen height */
+            background: url("https://i.pinimg.com/736x/bb/fd/7f/bbfd7fa3f15ac6217b6a36ec70547311.jpg") no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://i.pinimg.com/474x/36/69/ed/3669ed1bdbc3b511ecbb24ab1232dd2d.jpg" alt="Gayathri Enterprises Logo">
+                <div class="logo-text">Gayathri Enterprises</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#booking">Book Order</a></li>
+                <li><a href="#orders">My Orders</a></li>
+                <li><a href="#khata">Khata Book</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- rest of your sections remain same -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Gayathri Enterprises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

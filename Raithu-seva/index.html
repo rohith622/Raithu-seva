@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raithu Seva - Empowering Farmers</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo">Raithu <span>Seva</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#weather">Weather</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="btn-primary">Book Now</a>
+      <div class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Empowering Farmers with Easy Services</h1>
+      <p>Book tractors, rent tools, hire workers — all in one place.</p>
+      <a href="#services" class="btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <!-- Tractors -->
+    <div class="container">
+      <h3>🚜 Tractors & Equipment</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/tractor1.jpg" alt="Tractor" />
+          <h4>John Deere 5050D</h4>
+          <p>₹800/hour</p>
+        </div>
+        <div class="service-card">
+          <img src="images/tractor2.jpg" alt="Tractor" />
+          <h4>Massey Ferguson 241</h4>
+          <p>₹750/hour</p>
+        </div>
+        <div class="service-card">
+          <img src="images/tractor3.jpg" alt="Tractor" />
+          <h4>Mahindra Arjun 555</h4>
+          <p>₹900/hour</p>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <h3>🧰 Tools & Machines</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/plough.jpg" alt="Plough" />
+          <h4>Plough</h4>
+          <p>₹300/day</p>
+        </div>
+        <div class="service-card">
+          <img src="images/harvester.jpg" alt="Harvester" />
+          <h4>Harvester</h4>
+          <p>₹1000/day</p>
+        </div>
+        <div class="service-card">
+          <img src="images/seed-drill.jpg" alt="Seed Drill" />
+          <h4>Seed Drill</h4>
+          <p>₹400/day</p>
+        </div>
+      </div>
+
+      <!-- Workers -->
+      <h3>👷 Workers / Coolies</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/worker1.jpg" alt="Worker" />
+          <h4>Farm Labor (Male)</h4>
+          <p>₹600/day</p>
+        </div>
+        <div class="service-card">
+          <img src="images/worker2.jpg" alt="Worker" />
+          <h4>Farm Helper (Female)</h4>
+          <p>₹500/day</p>
+        </div>
+        <div class="service-card">
+          <img src="images/worker3.jpg" alt="Worker" />
+          <h4>Driver</h4>
+          <p>₹700/day</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weather Section -->
+  <section class="weather" id="weather">
+    <div class="container">
+      <h2>🌦️ Live Weather Report</h2>
+      <div class="weather-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="getWeather">Get Weather</button>
+        <div id="weatherResult">
+          <p>Enter your city to check the weather.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Raithu Seva</h2>
+    <p>Raithu Seva is a platform designed to make farming easier. Farmers can hire workers, rent tractors, or book tools online — saving time, money, and effort.</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <textarea placeholder="Your Message" rows="4"></textarea>
+      <button class="btn-primary">Send Message</button>
+    </form>
+  </section>
+  <section id="weather-section" class="weather">
+  <div class="container">
+    <h2>Live Weather Updates</h2>
+    <div id="weather" class="weather-box">
+      <p>Fetching your weather data...</p>
+    </div>
+  </div>
+</section>
+
+<!-- Registration Section -->
+<section id="register" class="register">
+  <div class="container">
+    <h2>Join Raithu Seva</h2>
+    <p>Register below to start working or hire workers for your needs.</p>
+
+    <div class="register-options">
+      <div class="register-card">
+        <h3>👷‍♂️ I'm a Worker</h3>
+        <p>Register to get daily work opportunities like tractor driving, spraying, fieldwork, and more.</p>
+        <a href="#workerForm" class="btn-primary">Register as Worker</a>
+      </div>
+
+      <div class="register-card">
+        <h3>🚜 I want to Hire</h3>
+        <p>Find skilled workers, tractor services, and equipment rentals for your farm.</p>
+        <a href="#hireForm" class="btn-primary">Register to Hire</a>
+      </div>
+    </div>
+
+    <!-- Worker Registration Form -->
+    <div id="workerForm" class="form-box">
+      <h3>Worker Registration Form</h3>
+      <form id="workerRegister">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Mobile Number" required>
+        <input type="text" placeholder="Skill (e.g., Tractor Driver, Sprayer, etc.)" required>
+        <input type="text" placeholder="Location" required>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <!-- Hirer Registration Form -->
+    <div id="hireForm" class="form-box">
+      <h3>Hire Request Form</h3>
+      <form id="hireRegister">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Mobile Number" required>
+        <input type="text" placeholder="Requirement (e.g., Tractor, 2 workers for spraying, etc.)" required>
+        <input type="text" placeholder="Location" required>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">Raithu <span>Seva</span></div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#weather">Weather</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 Raithu Seva. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

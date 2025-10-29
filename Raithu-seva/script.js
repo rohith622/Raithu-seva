@@ -60,3 +60,71 @@ document.getElementById("hireRegister").addEventListener("submit", function (e) 
   alert("✅ Hire request submitted successfully! (Backend connection coming soon)");
   this.reset();
 });
+
+// 👷‍♂️ Worker Booking Quantity Logic
+const workers = [
+  { price: 500 }, // harvesting worker
+  { price: 800 }, // tractor driver
+  { price: 400 }  // cleaner
+];
+
+function increaseQty(index) {
+  const qtyEl = document.getElementById(`qty-${index}`);
+  const totalEl = document.getElementById(`total-${index}`);
+  let qty = parseInt(qtyEl.textContent);
+  qty++;
+  qtyEl.textContent = qty;
+  totalEl.textContent = qty * workers[index].price;
+}
+
+function decreaseQty(index) {
+  const qtyEl = document.getElementById(`qty-${index}`);
+  const totalEl = document.getElementById(`total-${index}`);
+  let qty = parseInt(qtyEl.textContent);
+  if (qty > 1) {
+    qty--;
+    qtyEl.textContent = qty;
+    totalEl.textContent = qty * workers[index].price;
+  }
+}
+
+document.getElementById("getLocationBtn").addEventListener("click", getLocation);
+
+function getLocation() {
+  const output = document.getElementById("output");
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else {
+    output.innerHTML = "❌ Geolocation is not supported by this browser.";
+  }
+
+  function showPosition(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    output.innerHTML = `
+      ✅ Your Location Detected:<br>
+      <b>Latitude:</b> ${lat}<br>
+      <b>Longitude:</b> ${lon}<br>
+      <iframe width="90%" height="300"
+        src="https://www.google.com/maps?q=${lat},${lon}&output=embed">
+      </iframe>`;
+  }
+
+  function showError(error) {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        output.innerHTML = "User denied the location request ❌.";
+        break;
+      case error.POSITION_UNAVAILABLE:
+        output.innerHTML = "Location information is unavailable ⚠️.";
+        break;
+      case error.TIMEOUT:
+        output.innerHTML = "The request to get user location timed out ⏳.";
+        break;
+      default:
+        output.innerHTML = "An unknown error occurred.";
+    }
+  }
+}

@@ -506,3 +506,145 @@ body {
 .worker-card button:hover {
   background: #218838;
 }
+
+.workers-section {
+  text-align: center;
+  padding: 50px 0;
+  background: #f9fbe7;
+}
+
+.workers-section h2 {
+  color: #1b5e20;
+  margin-bottom: 30px;
+}
+
+.worker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
+}
+
+.worker-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.worker-card:hover {
+  transform: translateY(-8px);
+}
+
+.worker-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.qty-btn {
+  background: #1e7d31;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.qty-btn:hover {
+  background: #145d24;
+}
+
+.book-btn {
+  background: #f0c419;
+  color: #1e7d31;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.book-btn:hover {
+  background: #d4ad10;
+}
+
+/* General page styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin: 5px 0 0 0;
+  font-size: 1.1em;
+}
+
+/* Main content */
+main {
+  padding: 40px 20px;
+}
+
+button {
+  background-color: #c6d280;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #edf3f0;
+}
+
+#output {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Map frame */
+iframe {
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgb(226, 230, 225);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #eaefed;
+  color: white;
+  font-size: 14px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Tables Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        .inner-table th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Nested Tables</h2>
+
+<table>
+    <tr>
+        <th>Section A</th>
+        <th>Section B</th>
+        <th>Section C</th>
+        <th>Section D</th>
+    </tr>
+
+    <tr>
+        <td>Data A1</td>
+        <td>Data B1</td>
+        <td>
+            <strong>Inner Table 1</strong>
+            <table class="inner-table" width="100%">
+                <tr>
+                    <th>Title</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>170 cm</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>65 kg</td>
+                </tr>
+            </table>
+        </td>
+        <td>Data D1<br>Extra info</td>
+    </tr>
+
+    <tr>
+        <td>
+            <strong>Inner Table 2</strong>
+            <table class="inner-table" width="100%">
+                <tr>
+                    <th>Course</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>90</td>
+                </tr>
+            </table>
+        </td>
+        <td>Data B2</td>
+        <td>Data C2</td>
+        <td>Data D2</td>
+    </tr>
+
+    <tr>
+        <td>Data A3</td>
+        <td>Data B3</td>
+        <td>Data C3</td>
+        <td>Data D3</td>
+    </tr>
+
+    <tr>
+        <td colspan="4" style="text-align:center;">
+            Final Row of Main Table
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

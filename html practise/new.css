@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.about-section {
+    background: purple;
+    padding: 50px;
+    color: white;
+}
+
+.about-content {
+    display: flex;
+    gap: 30px;
+}
+
+.about-image img {
+    width: 300px;
+}
+
+.about-text {
+    font-size: 18px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+        .form-container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background: rgba(22, 214, 22, 0.896);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form>
+       
+        <label>First Name</label>
+        <input type="text" required>
+
+        
+        <label>Last Name</label>
+        <input type="text" required>
+
+       
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        
+        <label>Local Time</label>
+        <input type="time" required>
+
+       
+        <label>Mobile Number</label>
+        <input 
+            type="text"
+            maxlength="10"
+            pattern="[0-9]{10}"
+            inputmode="numeric"
+            placeholder="Enter 10-digit number"
+            required
+        >
+
+      
+        <label>City / Town</label>
+        <input type="text" required>
+
+        
+        <label>Postal Code</label>
+        <input 
+            type="text"
+            maxlength="6"
+            pattern="[0-9]{6}"
+            inputmode="numeric"
+            placeholder="Enter 6-digit PIN"
+            oninput="this.value = this.value.replace(/[^0-9]/g,'')"
+            required
+        >
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

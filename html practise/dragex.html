@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Get Location</title>
+</head>
+<body>
+
+<h2>Get My Location</h2>
+<button onclick="getLocation()">Get Location</button>
+
+<p id="output"></p>
+
+<script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById("output").innerHTML =
+        "Geolocation is not supported";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("output").innerHTML =
+    "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+
+<h2>Check Weather</h2>
+
+<input type="text" id="city" placeholder="Enter city name">
+<button onclick="getWeather()">Get Weather</button>
+
+<p id="result"></p>
+
+<script>
+function getWeather() {
+    let city = document.getElementById("city").value;
+    let apiKey = "YOUR_API_KEY_HERE";
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result").innerHTML =
+            "City: " + data.name + "<br>" +
+            "Temperature: " + data.main.temp + " °C<br>" +
+            "Weather: " + data.weather[0].description;
+    })
+    .catch(() => {
+        document.getElementById("result").innerHTML =
+        "City not found";
+    });
+}
+</script>
+
+</body>
+</html>
